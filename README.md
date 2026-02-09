@@ -1,126 +1,62 @@
+Below is an **updated, rewritten README** for the **Unity Project Bootstrapper**, intentionally aligned to be as **identical as possible in look, tone, structure, and section order** to the **Unity Scene Bootstrap** README you provided.
 
-# Unity Professional Folder Generator
+I’ve kept:
 
-A Unity Editor utility that generates consistent, industry-standard folder structures for Unity projects. The tool is designed to reduce initial setup time, enforce organizational consistency, and support scalable project development.
+* The **same headline flow**
+* The **same section order**
+* A **lighter, editor-tool–focused tone**
+* Shorter, punchier descriptions
+* Comparable terminology and formatting
 
-The tool is editor-only, does not overwrite existing folders, and integrates cleanly with version control workflows.
+Only the *content* differs where it must (folders vs scene objects).
 
 ---
 
-## Overview
+# Unity Project Bootstrap
 
-Unity Professional Folder Generator allows teams and individual developers to quickly scaffold a clean project directory using predefined or custom configurations. Folder structures are based on common production practices and can be adapted to suit different project sizes and workflows.
+[![GitHub](https://img.shields.io/github/license/SBUplakankus/unity-project-bootstrapper)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/SBUplakankus/unity-project-bootstrapper)](https://github.com/SBUplakankus/unity-project-bootstrapper/releases)
+[![GitHub issues](https://img.shields.io/github/issues/SBUplakankus/unity-project-bootstrapper)](https://github.com/SBUplakankus/unity-project-bootstrapper/issues)
+[![GitHub stars](https://img.shields.io/github/stars/SBUplakankus/unity-project-bootstrapper?style=social)](https://github.com/SBUplakankus/unity-project-bootstrapper/stargazers)
 
----
+A lightweight Unity Editor tool that automates creation of a clean, professional **project folder structure** with one click.
 
-## Features
-
-* Preset-based folder generation (Minimal, Standard, Complete, Game Jam)
-* Granular control over individual folders
-* Industry-standard asset organization
-* Optional auto-generated README files
-* Git-friendly folder tracking via `.gitkeep`
-* Optional `.gitignore` helpers for third-party content
-* Warnings for Unity special-purpose folders (e.g. `Resources`)
-* Full Undo/Redo support via Unity’s Undo system
-* Safe execution with no overwriting of existing folders
-* Modular, maintainable code architecture
+The tool is editor-only, adds no runtime dependencies, and safely generates folders without overwriting existing content.
 
 ---
 
 ## Installation
 
-### Option 1: Unity Package Manager (Git URL)
+### Via Unity Package Manager (From Git URL)
 
-1. Open Unity
-2. Navigate to **Window → Package Manager**
-3. Click the **+** button
-4. Select **Add package from git URL…**
+1. Open Unity Editor
+2. Go to **Window → Package Manager**
+3. Click the **+** button in the top-left corner
+4. Select **Add package from git URL...**
 5. Enter:
 
    ```
    https://github.com/SBUplakankus/unity-project-bootstrapper.git
    ```
-   
----
-
-### Included Files
-
-* `ProjectBootstrap.cs` — Editor window and UI
-* `FolderCreator.cs` — Folder generation logic
-* `FolderGeneratorSettings.cs` — User settings and preset configuration
-* `FolderStructureData.cs` — Folder definitions and descriptions
-* `FileGenerator.cs` — File and documentation generation utilities
-* `FolderPreset.cs` — Preset definitions
+6. Click **Add**
 
 ---
 
-## Usage
+## Features
 
-1. Open Unity
-2. Navigate to **Tools → Professional Folder Generator**
-3. Select a preset or manually configure folders
-4. Click **Generate Folder Structure**
-
-All folders are created immediately. Existing folders are preserved.
-
----
-
-## Architecture
-
-The project follows a clear separation of concerns to ensure maintainability and extensibility.
-
-```
-ProjectBootstrap/
-├── ProjectBootstrap.cs          Editor window (UI only)
-├── FolderCreator.cs             Folder creation logic
-├── FolderGeneratorSettings.cs   Configuration and presets
-├── FolderStructureData.cs       Folder definitions and metadata
-├── FileGenerator.cs             File creation utilities
-└── FolderPreset.cs              Preset enumeration
-```
-
-### Responsibilities
-
-**ProjectBootstrap.cs**
-
-* Renders the editor interface
-* Collects user input
-* Delegates execution to core logic
-
-**FolderCreator.cs**
-
-* Executes folder creation
-* Manages generation workflow
-* Tracks created assets
-
-**FolderGeneratorSettings.cs**
-
-* Stores user preferences
-* Applies preset configurations
-* Provides preset metadata
-
-**FolderStructureData.cs**
-
-* Defines folder hierarchies
-* Stores folder descriptions
-* Provides documentation templates
-
-**FileGenerator.cs**
-
-* Creates `.gitkeep` files
-* Generates README files
-* Generates warning files for special folders
-
-**FolderPreset.cs**
-
-* Defines available presets
+* **One-click project setup** – Generate a full folder structure instantly
+* **Preset-based layouts** – Minimal, Standard, Complete, and Game Jam presets
+* **Granular control** – Toggle individual folders on or off
+* **Industry-standard organization** – Proven production-ready structure
+* **Safe execution** – Never overwrites existing folders
+* **Git-friendly** – Optional `.gitkeep` and `.gitignore` helpers
+* **Unity-aware warnings** – Highlights special folders like `Resources`
+* **Undo support** – Folder creation is fully undoable
+* **Editor-only** – No runtime code or dependencies
 
 ---
 
-## Default Folder Structure
-
-### Core Folders
+## Example Output
 
 ```
 Assets/
@@ -151,12 +87,37 @@ Assets/
     └── Production/
 ```
 
+*Note: Only folders (and optional helper files) are created. No assets are modified.*
+
+---
+
+## Usage
+
+1. Open Unity
+2. Navigate to `Tools > Professional Folder Generator`
+3. In the window that appears:
+
+   * **Select a preset** or manually toggle folders
+   * **Configure options** such as README or `.gitkeep` generation
+   * **Click “Generate Folder Structure”**
+
+All folders are created immediately. Existing folders are preserved.
+
+---
+
+## Presets
+
+* **Minimal** – Core folders only, ideal for prototypes
+* **Standard (Recommended)** – Balanced setup for most projects
+* **Complete** – All available folders enabled
+* **Game Jam** – Lightweight structure for rapid iteration
+
 ---
 
 ## Optional Folders
 
-* Shaders
 * Animations
+* Shaders
 * Data
 * Settings
 * Editor
@@ -170,60 +131,72 @@ Assets/
 
 ## Unity Special Folders
 
-The following folders have special behavior in Unity and should be used deliberately:
+Some folders have special behavior in Unity and should be used intentionally:
 
-* `Resources` — Runtime-loaded assets (warning generated)
-* `StreamingAssets` — Files accessed directly at runtime
-* `Gizmos` — Custom scene view icons
+* **Resources** – Runtime-loaded assets (warning generated)
+* **StreamingAssets** – Direct file access at runtime
+* **Gizmos** – Custom scene view icons
 
 ---
 
-## Presets
+## Technical Details
 
-**Minimal**
-Core folders only. Intended for prototypes and small experiments.
+* **Editor-Only** – All scripts live in an `Editor` context
+* **No Dependencies** – Uses only Unity’s built-in APIs
+* **Undo Support** – Registered through Unity’s Undo system
+* **Non-destructive** – Existing folders are never replaced
+* **Version-control friendly** – Designed for team workflows
 
-**Standard (Recommended)**
-Balanced configuration suitable for most projects.
+---
 
-**Complete**
-All available folders enabled. Intended for large or long-term projects.
+## Architecture
 
-**Game Jam**
-Lightweight structure optimized for rapid iteration.
+```
+ProjectBootstrap/
+├── ProjectBootstrap.cs          Editor window (UI only)
+├── FolderCreator.cs             Folder creation logic
+├── FolderGeneratorSettings.cs   Presets and user configuration
+├── FolderStructureData.cs       Folder definitions and metadata
+├── FileGenerator.cs             README and helper file generation
+└── FolderPreset.cs              Preset enumeration
+```
+
+**Separation of concerns is strictly enforced** to keep the tool maintainable and extensible.
+
+---
+
+## Customization
+
+The tool is intentionally simple to extend.
+
+### Adding a New Folder
+
+1. Add a setting in `FolderGeneratorSettings.cs`
+2. Define metadata in `FolderStructureData.cs`
+3. Add creation logic in `FolderCreator.cs`
+4. Expose the option in the editor UI
+
+### Adding a New Preset
+
+1. Add a value to `FolderPreset.cs`
+2. Define its configuration in `FolderGeneratorSettings.cs`
+3. Add a description in `GetPresetDescription()`
 
 ---
 
 ## Best Practices
 
-* Start with the Standard preset and adjust as needed
-* Use a project root folder to separate first-party assets from packages
-* Avoid `Resources` unless explicitly required; prefer Addressables
-* Enable `.gitkeep` files for team-based projects
-* Isolate third-party assets in `_ThirdParty`
-
----
-
-## Extending the Tool
-
-### Adding a New Optional Folder
-
-1. Add a setting in `FolderGeneratorSettings.cs`
-2. Add folder metadata in `FolderStructureData.cs`
-3. Add creation logic in `FolderCreator.cs`
-4. Add a toggle to the editor UI
-
-### Adding a New Preset
-
-1. Add a new value to `FolderPreset.cs`
-2. Define preset configuration in `FolderGeneratorSettings.cs`
-3. Add a description in `GetPresetDescription()`
+* Start with the **Standard** preset and refine as needed
+* Keep first-party assets separated from third-party content
+* Avoid `Resources` unless explicitly required
+* Enable `.gitkeep` files for team-based repositories
+* Isolate imported assets inside `_ThirdParty`
 
 ---
 
 ## Contributing
 
-Contributions are welcome.
+This tool is designed to be small, readable, and easy to modify.
 
 1. Fork the repository
 2. Create a feature branch
@@ -231,29 +204,26 @@ Contributions are welcome.
 4. Push the branch
 5. Open a pull request
 
----
-
-## Changelog
-
-### v1.0.0 (2026)
-
-* Initial release
-* Preset-based folder generation
-* Customizable folder selection
-* Git integration
-* Unity special folder support
-* Undo/Redo support
+Bug fixes and quality-of-life improvements are especially welcome.
 
 ---
 
 ## License
 
-MIT License. See the LICENSE file for details.
+MIT License. See the `LICENSE` file for details.
 
 ---
 
 ## Support
 
-* Issues: GitHub Issues
-* Discussions: GitHub Discussions
+For issues or questions:
 
+1. Check the source code comments
+2. Ensure the scripts are placed in an `Editor` folder
+3. Open an issue on GitHub if needed
+
+---
+
+**Note:** This tool creates organizational structures only. It does not enforce architectural patterns or modify existing assets.
+
+---
