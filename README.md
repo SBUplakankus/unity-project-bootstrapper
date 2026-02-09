@@ -39,7 +39,7 @@ Unity Professional Folder Generator allows teams and individual developers to qu
 5. Enter:
 
    ```
-   https://github.com/yourusername/unity-folder-generator.git
+   https://github.com/SBUplakankus/unity-project-bootstrapper.git
    ```
    
 ---
