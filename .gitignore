@@ -1,0 +1,23 @@
+# This project doesn't use Unity itself, only contains Unity Editor scripts
+# So we only need basic .gitignore rules
+
+# OS Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+~*

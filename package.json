@@ -1,0 +1,22 @@
+{
+  "name": "com.massivemeltmedia.project-bootstrap",
+  "version": "1.0.0",
+  "displayName": "Project Bootstrap",
+  "description": "Generate industry-standard folder structures for Unity projects with customizable presets and smart defaults.",
+  "unity": "2019.4",
+  "keywords": [
+    "editor",
+    "tools",
+    "organization",
+    "folder",
+    "structure",
+    "workflow",
+    "productivity"
+  ],
+  "author": {
+    "name": "Massive Melt Media",
+    "email": "massivemeltmedia@gmail.com",
+    "url": "https://github.com/SBUplakankus"
+  },
+  "type": "tool"
+}
