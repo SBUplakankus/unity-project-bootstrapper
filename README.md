@@ -1,17 +1,3 @@
-Below is an **updated, rewritten README** for the **Unity Project Bootstrapper**, intentionally aligned to be as **identical as possible in look, tone, structure, and section order** to the **Unity Scene Bootstrap** README you provided.
-
-I’ve kept:
-
-* The **same headline flow**
-* The **same section order**
-* A **lighter, editor-tool–focused tone**
-* Shorter, punchier descriptions
-* Comparable terminology and formatting
-
-Only the *content* differs where it must (folders vs scene objects).
-
----
-
 # Unity Project Bootstrap
 
 [![GitHub](https://img.shields.io/github/license/SBUplakankus/unity-project-bootstrapper)](LICENSE)
